@@ -1,0 +1,39 @@
+<template>
+  <lightning-card title="Bitcoin Converter" icon-name="action:update">
+    <div
+      class="slds-var-p-horizontal_medium slds-small-size_6-of-12 slds-large-size_4-of-12"
+    >
+      <lightning-combobox
+        name="currencySelector"
+        label="Select Currency"
+        value={selectedCurrency}
+        options={currencies}
+        onchange={handleCurrencySelection}
+      ></lightning-combobox>
+    </div>
+    <div class="slds-grid slds-gutters slds-wrap slds-var-p-around_medium">
+      <div
+        class="slds-col slds-medium-size_6-of-12 slds-large-size_4-of-12 slds-var-m-vertical_small"
+      >
+        <lightning-input
+          type="number"
+          name="bitcoinValue"
+          label="Bitcoin Value"
+          value={bitcoinValue}
+          onchange={handleUpdate}
+        ></lightning-input>
+      </div>
+      <div
+        class="slds-col slds-medium-size_6-of-12 slds-large-size_4-of-12 slds-var-m-vertical_small"
+      >
+        <lightning-input
+          type="number"
+          name="valueInCurrency"
+          label={labelToDisplay}
+          value={bitcoinValueInSelectedCurrency}
+          onchange={handleUpdate}
+        ></lightning-input>
+      </div>
+    </div>
+  </lightning-card>
+</template>
