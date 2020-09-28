@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>On connected callback GET call is made to retrieve value of Bitcoin in different currencies. Once values are retrieved user can see value of Bitcoin in selcted currency.</description>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>bitcoinConverter</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
