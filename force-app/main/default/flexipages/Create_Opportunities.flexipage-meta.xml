@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>App for opportunity creation. User needs to populate all fields and select accounts for &apos;Create Opportunities&apos; button to show. On click Opps are created</description>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>createOpportunities</componentName>
+            </componentInstance>
+        </itemInstances>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Create Opportunities</masterLabel>
+    <template>
+        <name>flexipage:defaultAppHomeTemplate</name>
+    </template>
+    <type>AppPage</type>
+</FlexiPage>

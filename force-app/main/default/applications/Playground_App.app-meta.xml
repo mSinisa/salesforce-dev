@@ -11,6 +11,7 @@
     <label>Playground App</label>
     <navType>Standard</navType>
     <tabs>Bitcoin_Converter</tabs>
+    <tabs>Create_Opportunities</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Playground_App_UtilityBar</utilityBar>
 </CustomApplication>
