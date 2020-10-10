@@ -5,6 +5,10 @@
         <type>CustomTab</type>
     </appMenuItems>
     <appMenuItems>
+        <name>Create_Opportunities</name>
+        <type>CustomTab</type>
+    </appMenuItems>
+    <appMenuItems>
         <name>EinsteinInsights</name>
         <type>StandardAppMenuItem</type>
     </appMenuItems>

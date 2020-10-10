@@ -1,0 +1,59 @@
+<template>
+    <div>
+      <lightning-card title="Create Opportunites" icon-name="action:update">
+        <template if:true={canCreateOpportunities}>
+          <lightning-button
+            variant="brand"
+            label="Create Opportunities"
+            slot="actions"
+            onclick={createOpportunities}
+          ></lightning-button>
+        </template>
+        
+        <div
+          class="slds-grid slds-gutters slds-wrap slds-var-p-horizontal_medium"
+        >
+          <div class="slds-col slds-medium-size_6-of-12 slds-large-size_4-of-12">
+            <lightning-input
+              type="number"
+              required
+              name="opportunityAmount"
+              label="Amount"
+              value={oppAmount}
+              onchange={handleUpdate}
+            ></lightning-input>
+          </div>
+          <div class="slds-col slds-medium-size_6-of-12 slds-large-size_4-of-12">
+            <lightning-combobox
+              name="stagePicker"
+              required
+              label="Stage"
+              value={oppStage}
+              options={stageValues}
+              onchange={handleUpdate}
+            ></lightning-combobox>
+          </div>
+        </div>
+        <div
+          class="slds-var-p-horizontal_medium slds-small-size_6-of-12 slds-large-size_4-of-12"
+        >
+          <lightning-input
+            type="date"
+            required
+            name="closeDate"
+            label="Close Date"
+            value={closeDate}
+            onchange={handleUpdate}
+          ></lightning-input>
+        </div>
+      </lightning-card>
+  
+      <div class="slds-var-m-top_small">
+        <c-data-table
+          total-num-of-accounts={numberOfAllAccounts}
+          onaccountselect={setSelectedAccIds}
+        ></c-data-table>
+      </div>
+    </div>
+  </template>
+  

@@ -1,0 +1,28 @@
+<template>
+  <lightning-card>
+    <div slot="title">
+      <lightning-icon
+        icon-name="standard:account"
+        alternative-text="Account Icon"
+        class="slds-var-m-right_small"
+      ></lightning-icon>
+      <slot class="slds-text-heading_small">Accounts</slot>
+      <div class="slds-text-body_small slds-var-p-top_small">
+        {totalNumOfAccounts} Accounts to select. {datatableText}
+      </div>
+    </div>
+    <div style="height: 300px">
+      <lightning-datatable
+        key-field="Id"
+        data={accounts}
+        columns={columns}
+        onrowselection={handleRowAction}
+        enable-infinite-loading={canLoadMore}
+        onloadmore={loadMoreData}
+        is-loading={isLoading}
+        show-row-number-column
+      >
+      </lightning-datatable>
+    </div>
+  </lightning-card>
+</template>
