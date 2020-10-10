@@ -35,8 +35,8 @@ export default class DataTable extends LightningElement {
   connectedCallback() {
     this.setDefaultValues();
     getAccounts(this.parametersToGetAccounts())
-      .then(listOfAccounts => this.setAccounts(listOfAccounts))
-      .catch(error =>
+      .then((listOfAccounts) => this.setAccounts(listOfAccounts))
+      .catch((error) =>
         this.showNotification("Error", error.body.message, "error")
       );
   }
@@ -45,10 +45,10 @@ export default class DataTable extends LightningElement {
     if (this.allAccountsLoaded()) {
       this.setValuesBeforeLoadingAccounts();
       getAccounts(this.parametersToGetAccounts())
-        .then(listOfAccounts =>
+        .then((listOfAccounts) =>
           this.setValuesAfterAcctsAreLoaded(listOfAccounts)
         )
-        .catch(error =>
+        .catch((error) =>
           this.showNotification("Error", error.body.message, "error")
         );
     } else {
@@ -58,7 +58,7 @@ export default class DataTable extends LightningElement {
 
   handleRowAction(event) {
     this.listOfSelectedAccountIds = event.detail.selectedRows.map(
-      selectedRow => selectedRow.Id
+      (selectedRow) => selectedRow.Id
     );
 
     event.detail.selectedRows.length == 1
